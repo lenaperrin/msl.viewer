@@ -1,0 +1,10 @@
+processingDate       = 19/11/15 14:09:57
+coordsys             = C
+isColored            = true
+HiPSBuilder          = Aladin/HipsGen v8.040
+label                = 
+maxOrder             = 3
+red                  = r.fits [0.0 127.48724999999999 254.97449999999998 Linear]
+green                = g.fits [0.0 122.99924999999999 245.99849999999998 Linear]
+blue                 = b.fits [0.0 119.493 238.986 Linear]
+format               = png
