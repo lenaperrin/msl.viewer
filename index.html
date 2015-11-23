@@ -3,58 +3,64 @@
 <head>
 	<meta charset=utf-8 />
 	<title></title>
-	<link rel="stylesheet" type="text/css"  href="css/master.css" />
-	<link rel="stylesheet" type="text/css"  href="js/mizar/css/style.css" />
+	<link rel="stylesheet" type="text/css"  href="css/style.min.css" />
 	<!-- you can skip the following line if your page already integrates the jQuery library --> 
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.js" charset="utf-8"></script>
-	<script type="text/javascript" src="js/mizar/MizarWidget.min.js" charset="utf-8"></script>
-
+	<script  src="js/MizarWidget.min.js"></script>
 	<script type="text/javascript">
-		window.onload = function(){
-		    
-		    var options = {
-
-		    	nameResolver: {
-       				"zoomFov": 2,
-       				"baseUrl": ""
-    			},
-			    navigation: {
-      				"initTarget": [0,0]
-    			}
-			};
-
-		    var mizar = new MizarWidget('#mizarWidget-div', options);
 
 
-		    mizar.setCompassGui(true);
-			mizar.setPositionTrackerGui(false);
 
-			var customSurveyDescription = {
-   				"type": "healpix",
-   				"name": "Mars sol 789",
-			    "baseUrl" : "data/color_789/",
-    			"visible": true,
-    			"background": true,
-		 	    "format": "png"
-			};
+	window.onload = function(){
+			    
 
-	
-			mizar.setCustomBackgroundSurvey(customSurveyDescription);
+			    var options = {
 
-		 //    var myHipsLayerDesc = {
-  	// 			  "category": "Image",
-			// 	  "type": "healpix",
-			// 	  "name": "SOL 789",
-			// 	  "baseUrl" : "data/color_789/",
-			// 	  "description": "Panorama",
-			// 	  "visible": true,
-			// 	  "format": "png",
-			// 	  "background": true
-			// 	};
+			    	"nameResolver": {
+	       				"zoomFov": 2
+	    			},
 
-			// mizar.addLayer(myHipsLayerDesc);
+				    "navigation": {
+	      				"initTarget": [0,0],
+	      				"inertia" : false
+	    			},
+
+	    			"isPanorama": true
+	    			
+	 			};
+
+			    var mizar = new MizarWidget('#mizarWidget-div', options);
+
+
+				var customSurveyDescription = {
+	   				"type": "healpix",
+	   				"name": "Mars sol 789",
+				    "baseUrl" : "data/color_789/",
+	    			"visible": true,
+	    			"background": true,
+			 	    "format": "png"
+				};
+
+		
+				mizar.setCustomBackgroundSurvey(customSurveyDescription);
+
+			 //    var myHipsLayerDesc = {
+	  		// 			  "category": "Image",
+				// 	  "type": "healpix",
+				// 	  "name": "SOL 789",
+				// 	  "baseUrl" : "data/color_789/",
+				// 	  "description": "Panorama",
+				// 	  "visible": true,
+				// 	  "format": "png",
+				// 	  "background": true
+				// 	};
+
+				// mizar.addLayer(myHipsLayerDesc);
 
 		}
+
+
+
+		
 	</script>
 </head>
 <body>
